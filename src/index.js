@@ -1,2 +1,5 @@
 import "./styles.css";
-import { locationData } from "./locationData";
+import { getLocationData } from "./locationData";
+import { getInputValue } from "./inputValue";
+
+getInputValue();
