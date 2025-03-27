@@ -3,10 +3,73 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
 </head>
 
-<body></body>
+<body>
+    <div class="main-container">
+        <!-- Input -->
+        <div class="group">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                <g>
+                    <path
+                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                </g>
+            </svg>
+            <form class="my-form">
+                <input id="query" type="search" placeholder="Enter Location Name" name="searchbar" value="" />
+            </form>
+        </div>
+        <!--Weather card-->
+        <div class="weather-container">
+            <div class="weather-card">
+                <h1 class="location-name"></h1>
+                <div class="weather-info">
+                    <p class="temperature"></p>
+                    <p class="description"></p>
+                </div>
+                <div class="card-footer">
+                    <p class="date"></p>
+                </div>
+            </div>
+        </div>
+        <!--coming days' temperature-->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="day">
+                    <p class="day-name">Monday</p>
+                    <p class="temperature">22°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Tuesday</p>
+                    <p class="temperature">24°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Wednesday</p>
+                    <p class="temperature">20°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Thursday</p>
+                    <p class="temperature">18°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Friday</p>
+                    <p class="temperature">21°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Saturday</p>
+                    <p class="temperature">23°C</p>
+                </div>
+                <div class="day">
+                    <p class="day-name">Sunday</p>
+                    <p class="temperature">25°C</p>
+                </div>
+            </div>
+        </div>
+        <!--End of coming day's temperature-->
+    </div>
+</body>
 
 </html>
