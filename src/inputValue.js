@@ -1,7 +1,10 @@
 export { getInputValue };
 import { getLocationData } from "./locationData";
+import { getComingDays } from "./comingDays";
 
 function getInputValue() {
+  getLocationData("cairo");
+  getComingDays("cairo");
   const searchInput = document.querySelector("#query");
 
   console.log(searchInput);
@@ -11,6 +14,7 @@ function getInputValue() {
     if (searchInput.value === "") {
       return;
     }
-    return getLocationData(searchInput.value);
+    getLocationData(searchInput.value);
+    getComingDays(searchInput.value);
   });
 }

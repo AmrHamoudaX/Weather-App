@@ -1,11 +1,11 @@
 export { getLocationData };
 import { format } from "date-fns";
 
-async function getLocationData(locationName) {
+async function getLocationData(locationName = "cairo") {
   const response = await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/` +
-      locationName +
-      `?unitGroup=metric&include=days&key=8QNJGXAPYFNUSS3G9WT6862CE&contentType=json
+    locationName +
+    `?unitGroup=metric&include=days&key=8QNJGXAPYFNUSS3G9WT6862CE&contentType=json
 `,
     { mode: "cors" },
   );
@@ -17,7 +17,7 @@ async function getLocationData(locationName) {
 
   //Dom
   const cityName = document.querySelector(".location-name");
-  const temperature = document.querySelector(".temperature");
+  const temperature = document.querySelector(".today");
   const description = document.querySelector(".description");
   const date = document.querySelector(".date");
 
